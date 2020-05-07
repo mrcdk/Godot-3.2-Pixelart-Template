@@ -29,7 +29,7 @@ config/icon="res://icon.png"
 Events="*res://Events.gd"
 Settings="*res://Settings.tscn"
 Transitions="*res://Transitions.tscn"
-HandIndicator="*res://HandIndicator.tscn"
+HandIndicator="*res://gui/HandIndicator.tscn"
 
 [display]
 
