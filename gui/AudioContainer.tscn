@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://gui/AudioContainer.gd" type="Script" id=1]
+[ext_resource path="res://gui/m5x7-32.tres" type="DynamicFont" id=2]
+[ext_resource path="res://gui/VolumeSliderContainer.tscn" type="PackedScene" id=4]
+
+[node name="AudioContainer" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 320.0
+margin_bottom = 26.0
+custom_fonts/font = ExtResource( 2 )
+text = "settings_title_audio"
+align = 1
+uppercase = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_top = 30.0
+margin_right = 320.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 20.0
+margin_right = 320.0
+margin_bottom = 54.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_right = 320.0
+margin_bottom = 14.0
+text = "settings_audio_master"
+uppercase = true
+
+[node name="MasterVolumeContainer" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 14.0
+margin_right = 320.0
+margin_bottom = 34.0
+
+[node name="HBoxContainer2" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 58.0
+margin_right = 320.0
+margin_bottom = 92.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 320.0
+margin_bottom = 14.0
+text = "settings_audio_music"
+uppercase = true
+
+[node name="MusicVolumeContainer" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 14.0
+margin_right = 320.0
+margin_bottom = 34.0
+bus = "Music"
+
+[node name="HBoxContainer3" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 96.0
+margin_right = 320.0
+margin_bottom = 130.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3"]
+margin_right = 320.0
+margin_bottom = 14.0
+text = "settings_audio_sfx"
+uppercase = true
+
+[node name="SFXVolumeContainer" parent="VBoxContainer/HBoxContainer3" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 14.0
+margin_right = 320.0
+margin_bottom = 34.0
+bus = "SFX"

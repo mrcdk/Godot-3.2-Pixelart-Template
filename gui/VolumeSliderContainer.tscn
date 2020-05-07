@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://gui/VolumeSliderContainer.gd" type="Script" id=1]
+
+[node name="VolumeSliderContainer" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MinusButton" type="Button" parent="."]
+margin_top = 80.0
+margin_right = 20.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+focus_neighbour_right = NodePath("../PlusButton")
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "-"
+
+[node name="VolumeSlider" type="HSlider" parent="."]
+margin_left = 24.0
+margin_top = 82.0
+margin_right = 296.0
+margin_bottom = 98.0
+focus_mode = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 1.0
+ticks_on_borders = true
+
+[node name="PlusButton" type="Button" parent="."]
+margin_left = 300.0
+margin_top = 80.0
+margin_right = 320.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+focus_neighbour_left = NodePath("../MinusButton")
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+text = "+"
+[connection signal="pressed" from="MinusButton" to="." method="_on_MinusButton_pressed"]
+[connection signal="value_changed" from="VolumeSlider" to="." method="_on_VolumeSlider_value_changed"]
+[connection signal="pressed" from="PlusButton" to="." method="_on_PlusButton_pressed"]

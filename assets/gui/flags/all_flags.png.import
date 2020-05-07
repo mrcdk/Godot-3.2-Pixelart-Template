@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/all_flags.png-54f4d6ecc5ff01d487cac2e3223ff83d.image"
+
+[deps]
+
+source_file="res://assets/gui/flags/all_flags.png"
+dest_files=[ "res://.import/all_flags.png-54f4d6ecc5ff01d487cac2e3223ff83d.image" ]
+
+[params]
+
