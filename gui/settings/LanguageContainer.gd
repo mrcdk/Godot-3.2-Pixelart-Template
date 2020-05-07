@@ -2,7 +2,7 @@ extends VBoxContainer
 
 onready var Languages = find_node("Languages")
 
-var language_entry_scene = preload("res://gui/LanguageEntry.tscn")
+var language_entry_scene = preload("res://gui/settings/LanguageEntry.tscn")
 var index = 0
 
 func _ready() -> void:

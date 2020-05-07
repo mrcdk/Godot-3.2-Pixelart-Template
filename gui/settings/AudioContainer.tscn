@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://gui/AudioContainer.gd" type="Script" id=1]
-[ext_resource path="res://gui/m5x7-32.tres" type="DynamicFont" id=2]
-[ext_resource path="res://gui/VolumeSliderContainer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gui/m5x7-32.tres" type="DynamicFont" id=1]
+[ext_resource path="res://gui/settings/AudioContainer.gd" type="Script" id=2]
+[ext_resource path="res://gui/settings/VolumeSliderContainer.tscn" type="PackedScene" id=3]
 
 [node name="AudioContainer" type="VBoxContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -16,7 +16,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="."]
 margin_right = 320.0
 margin_bottom = 26.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "settings_title_audio"
 align = 1
 uppercase = true
@@ -41,7 +41,7 @@ margin_bottom = 14.0
 text = "settings_audio_master"
 uppercase = true
 
-[node name="MasterVolumeContainer" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
+[node name="MasterVolumeContainer" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 14.0
@@ -60,7 +60,7 @@ margin_bottom = 14.0
 text = "settings_audio_music"
 uppercase = true
 
-[node name="MusicVolumeContainer" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 4 )]
+[node name="MusicVolumeContainer" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 14.0
@@ -80,7 +80,7 @@ margin_bottom = 14.0
 text = "settings_audio_sfx"
 uppercase = true
 
-[node name="SFXVolumeContainer" parent="VBoxContainer/HBoxContainer3" instance=ExtResource( 4 )]
+[node name="SFXVolumeContainer" parent="VBoxContainer/HBoxContainer3" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 14.0
