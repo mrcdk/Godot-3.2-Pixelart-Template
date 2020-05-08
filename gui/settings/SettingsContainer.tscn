@@ -7,10 +7,6 @@
 [ext_resource path="res://gui/settings/SettingsContainer.gd" type="Script" id=5]
 [ext_resource path="res://assets/suck.wav" type="AudioStream" id=6]
 
-
-
-
-
 [node name="SettingsContainer" type="PanelContainer"]
 pause_mode = 2
 anchor_right = 1.0
@@ -139,8 +135,8 @@ margin_bottom = 168.0
 alignment = 1
 
 [node name="SaveButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
-margin_left = 115.0
-margin_right = 190.0
+margin_left = 186.0
+margin_right = 261.0
 margin_bottom = 18.0
 rect_min_size = Vector2( 60, 0 )
 focus_neighbour_top = NodePath("../../HBoxContainer/AudioContainer/VBoxContainer/HBoxContainer3/SFXVolumeContainer/MinusButton")
@@ -149,6 +145,7 @@ mouse_default_cursor_shape = 2
 text = "common_save"
 
 [node name="ControlsButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+visible = false
 margin_left = 194.0
 margin_right = 332.0
 margin_bottom = 18.0
@@ -159,8 +156,8 @@ mouse_default_cursor_shape = 2
 text = "settings_change_controls"
 
 [node name="CancelButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
-margin_left = 336.0
-margin_right = 418.0
+margin_left = 265.0
+margin_right = 347.0
 margin_bottom = 18.0
 rect_min_size = Vector2( 60, 0 )
 focus_neighbour_left = NodePath("../ControlsButton")

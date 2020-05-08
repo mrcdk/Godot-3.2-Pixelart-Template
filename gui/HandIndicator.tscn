@@ -2,8 +2,8 @@
 
 [ext_resource path="res://gui/HandControl.tscn" type="PackedScene" id=1]
 
-
 [node name="HandIndicator" type="CanvasLayer"]
+pause_mode = 2
 layer = 100
 
 [node name="HandControl" parent="." instance=ExtResource( 1 )]

@@ -8,10 +8,12 @@ func _process(delta):
 		visible = false
 		return
 	
+	"""
 	var scroll_container = _find_scroll_container(focus_owner)
 	
 	if scroll_container:
 		focus_owner = scroll_container
+	"""
 	
 	var target = focus_owner.rect_global_position
 	target.y += focus_owner.rect_size.y / 2

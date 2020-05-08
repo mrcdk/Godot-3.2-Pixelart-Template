@@ -94,6 +94,7 @@ tracks/0/keys = {
 }
 
 [node name="Transitions" type="CanvasLayer"]
+pause_mode = 2
 layer = 120
 script = ExtResource( 1 )
 
@@ -151,7 +152,7 @@ mouse_filter = 2
 [node name="AnimatedSprite" type="AnimatedSprite" parent="LoadingContainer/VBoxContainer/HBoxContainer/Control"]
 position = Vector2( 0, 8 )
 frames = SubResource( 7 )
-frame = 3
+frame = 1
 playing = true
 centered = false
 

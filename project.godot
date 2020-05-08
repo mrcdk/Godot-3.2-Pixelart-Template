@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Resource",
+"class": "SaveFile",
+"language": "GDScript",
+"path": "res://SaveFile.gd"
+}, {
+"base": "Resource",
 "class": "SettingsData",
 "language": "GDScript",
 "path": "res://SettingsData.gd"
 } ]
 _global_script_class_icons={
+"SaveFile": "",
 "SettingsData": ""
 }
 
@@ -28,6 +34,7 @@ config/icon="res://icon.png"
 
 Events="*res://Events.gd"
 Settings="*res://Settings.tscn"
+SaveLoad="*res://SaveLoad.tscn"
 Transitions="*res://Transitions.tscn"
 HandIndicator="*res://gui/HandIndicator.tscn"
 

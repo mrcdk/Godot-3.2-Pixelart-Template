@@ -3,7 +3,6 @@
 [ext_resource path="res://gui/m5x7-32.tres" type="DynamicFont" id=1]
 [ext_resource path="res://gui/settings/LanguageContainer.gd" type="Script" id=3]
 
-
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="LanguageContainer" type="VBoxContainer"]
@@ -38,6 +37,7 @@ margin_right = 20.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 16, 16 )
 focus_neighbour_right = NodePath("../NextButton")
+mouse_default_cursor_shape = 2
 size_flags_vertical = 4
 text = "<"
 
@@ -54,6 +54,7 @@ margin_right = 320.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 16, 16 )
 focus_neighbour_left = NodePath("../PrevButton")
+mouse_default_cursor_shape = 2
 size_flags_vertical = 4
 text = ">"
 [connection signal="pressed" from="HBoxContainer/PrevButton" to="." method="_on_PrevButton_pressed"]

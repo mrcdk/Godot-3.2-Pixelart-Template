@@ -13,10 +13,12 @@ func _ready() -> void:
 			continue
 		var entry = language_entry_scene.instance()
 		entry.language = language
-		entry.hide()
 		Languages.add_child(entry)
-		
-	Languages.get_child(index).show()
+		if language == Settings.settings.language:
+			entry.show()
+			index = entry.get_index()
+		else:
+			entry.hide()
 	
 func _change():
 	for i in Languages.get_child_count():

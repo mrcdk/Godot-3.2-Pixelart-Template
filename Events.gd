@@ -1,4 +1,3 @@
 extends Node
 
-#signal load_game_requested()
-#signal save_game_requested()
+signal html5_click_grabber_clicked()
