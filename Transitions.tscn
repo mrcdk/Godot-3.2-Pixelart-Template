@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Transitions.gd" type="Script" id=1]
 [ext_resource path="res://gui/m5x7-32.tres" type="DynamicFont" id=2]
-[ext_resource path="res://assets/gui/loading/loading.png" type="Texture" id=3]
 [ext_resource path="res://gui/Theme.theme" type="Theme" id=4]
 
 [sub_resource type="Animation" id=1]
@@ -40,19 +39,15 @@ tracks/0/keys = {
 }
 
 [sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 3 )
 region = Rect2( 16, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 3 )
 region = Rect2( 32, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 3 )
 region = Rect2( 48, 0, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=7]
@@ -152,7 +147,7 @@ mouse_filter = 2
 [node name="AnimatedSprite" type="AnimatedSprite" parent="LoadingContainer/VBoxContainer/HBoxContainer/Control"]
 position = Vector2( 0, 8 )
 frames = SubResource( 7 )
-frame = 1
+frame = 2
 playing = true
 centered = false
 

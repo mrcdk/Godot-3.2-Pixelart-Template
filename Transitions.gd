@@ -19,10 +19,14 @@ func _ready() -> void:
 	LoadingContainer.modulate.a = 0.0
 	BlackRect.color.a = 0.0
 
-func change_scene(scene_path:String):
+func change_scene(scene_path:String, skip_fade_to_black:bool = false, skip_fade_from_black:bool = false):
 	_update_loading_text()
-	fade_to_black()
-	yield(FadeAnimations, "animation_finished")
+	
+	if not skip_fade_to_black:
+		fade_to_black()
+		yield(FadeAnimations, "animation_finished")
+	else:
+		BlackRect.color.a = 1.0
 	
 	hide_loading = false
 	var start_loading = true
@@ -50,8 +54,11 @@ func change_scene(scene_path:String):
 		LoadingAnimations.play("hide")
 		yield(LoadingAnimations, "animation_finished")
 		
-	fade_from_black()
-	yield(FadeAnimations, "animation_finished")
+	if not skip_fade_from_black:
+		fade_from_black()
+		yield(FadeAnimations, "animation_finished")
+	else:
+		BlackRect.color.a = 0.0
 	
 	emit_signal("change_finished")
 
